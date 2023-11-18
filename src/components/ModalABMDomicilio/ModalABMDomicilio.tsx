@@ -7,8 +7,6 @@ import { useFormik } from "formik";
 
 //Notificaciones al usuario
 import { toast } from 'react-toastify';
-
-
 import { ModalType } from "../../types/ModalType";
 import { Domicilio } from "../../types/Domicilio";
 import { DomicilioService } from "../../services/DomicilioService";
@@ -30,6 +28,8 @@ const ModalABMDomicilio = ({show, onHide, calle, domi,modalType,refreshData}:Mod
 
   //CREATE-UPDATE función handleSaveUpdate 
 
+  console.log (domi);
+
   const handleSaveUpdate = async (domi : Domicilio) => {
     try {
       const isNew = domi.id === 0;
@@ -42,7 +42,7 @@ const ModalABMDomicilio = ({show, onHide, calle, domi,modalType,refreshData}:Mod
 
       toast.success(isNew ? "Domicilio creada" : "Domicilio actualizada", {
         position: "top-center"
-      });
+      });0
       onHide();
       refreshData(prevState => !prevState);
     } catch (error) {

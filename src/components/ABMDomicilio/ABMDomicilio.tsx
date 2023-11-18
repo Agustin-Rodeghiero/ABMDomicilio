@@ -109,8 +109,8 @@ const ABMUnidadMedida = () => {
                   <td>{domicilio.localidad}</td>
 
 
-                  <td> <EditButton onClick={() => handleClick("Editar unidad medida", Domicilio, ModalType.UPDATE)} /> </td>
-                  <td> <DeleteButton onClick={() => handleClick("Borrar unidad medida", Domicilio, ModalType.DELETE)} /> </td>
+                  <td> <EditButton onClick={() => handleClick("Editar domicilio", domicilio, ModalType.UPDATE)} /> </td>
+                  <td> <DeleteButton onClick={() => handleClick("Borrar domicilio", domicilio, ModalType.DELETE)} /> </td>
 
                 </tr>
               ))}
